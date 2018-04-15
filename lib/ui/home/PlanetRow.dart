@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:planets_flutter/data/models/Planet.dart';
 
 class PlanetRow extends StatelessWidget {
+  final Planet planet;
+
+  PlanetRow(this.planet);
+
   @override
   Widget build(BuildContext context) {
 
@@ -8,7 +13,7 @@ class PlanetRow extends StatelessWidget {
       margin: new EdgeInsets.symmetric(vertical: 16.0),
       alignment: FractionalOffset.centerLeft,
       child: new Image(
-        image: new AssetImage("assets/img/mars.png"),
+        image: new AssetImage(planet.image),
         height: 92.0,
         width: 92.0,
       ),
